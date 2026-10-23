@@ -156,21 +156,9 @@ Audio (.wav + .txt) -> Resample -> Segment into cycles -> MFCC features -> Split
   <img src="images/fig04_metrics_by_class.png" width="48%" alt="Metrics by class">
 </p>
 
-### Deeper Look at the Hybrid Model
-
-<p align="center">
-  <img src="images/fig05_normalized_confusion_matrix.png" width="48%" alt="Normalised confusion matrix">
-  <img src="images/fig07_class_share_vs_recall.png" width="48%" alt="Class share vs recall">
-</p>
-<p align="center">
-  <img src="images/fig08_error_breakdown.png" width="60%" alt="Error breakdown">
-</p>
-
-The normalised matrix shows what fraction of each real class the model gets right. Recall drops as classes get rarer, and most errors for Wheezes and Wheezes + Crackles are confusions with Normal and Crackles.
 
 ### Comparison with Previous Work (ICBHI 2017)
 
-![Comparison with prior work](images/fig06_prior_work.png)
 
 | Study | Method | Accuracy |
 |---|---|---:|
