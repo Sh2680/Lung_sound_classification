@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="documents/images/banner.png" alt="Lung Sound Classification banner" width="100%">
+  <img src="images/banner.png" alt="Lung Sound Classification banner" width="100%">
 </p>
 
 # Lung Sound Classification for Chronic Respiratory Disease
@@ -34,7 +34,7 @@ Chronic respiratory diseases such as COPD and bronchitis are among the world's m
 
 This project builds a lightweight, non-invasive classifier that listens to a single breathing cycle and decides whether it is **normal** or contains **crackles**, **wheezes**, or **both**. Audio is cleaned and segmented, converted to MFCC features, balanced with SMOTE, and classified by a **hybrid model** that stacks an SVC and a KNN under a Logistic Regression meta-learner.
 
-The project accompanies the research paper *"Designing a Hybrid Model for Chronic Respiratory Disease using Lung Sound Classification"* (G H Raisoni College of Engineering, Nagpur).
+The project accompanies the research paper *"Designing a Hybrid Model for Chronic Respiratory Disease using Lung Sound Classification"*.
 
 | | |
 |---|---|
@@ -93,11 +93,11 @@ This is a research and learning project. The results come from a public dataset 
 | Wheezes + Crackles | 3 | 506 | 7.3% |
 | **Total** | | **6,898** | 100% |
 
-![Class distribution](documents/images/fig01_class_distribution.png)
+![Class distribution](images/fig01_class_distribution.png)
 
 ## Methodology
 
-![Workflow of the proposed model](assets/workflow.png)
+![Workflow of the proposed model](images/flowchart.png)
 
 ```
 Audio (.wav + .txt) -> Resample -> Segment into cycles -> MFCC features -> Split + scale -> SMOTE -> SVC + KNN -> Logistic Regression meta-model -> Evaluation
@@ -134,11 +134,11 @@ Audio (.wav + .txt) -> Resample -> Segment into cycles -> MFCC features -> Split
 
 ### Headline Metrics
 
-![Headline metrics](documents/images/kpi_cards.png)
+![Headline metrics](images/kpi_cards.png)
 
 ## Model Performance
 
-![Model comparison](documents/images/fig02_model_comparison.png)
+![Model comparison](images/fig02_model_comparison.png)
 
 | Model | Accuracy |
 |---|---:|
@@ -152,25 +152,25 @@ Audio (.wav + .txt) -> Resample -> Segment into cycles -> MFCC features -> Split
 | **Hybrid (SVC + KNN)** | **79.56%** |
 
 <p align="center">
-  <img src="documents/images/fig03_confusion_matrix.png" width="48%" alt="Confusion matrix">
-  <img src="documents/images/fig04_metrics_by_class.png" width="48%" alt="Metrics by class">
+  <img src="images/fig03_confusion_matrix.png" width="48%" alt="Confusion matrix">
+  <img src="images/fig04_metrics_by_class.png" width="48%" alt="Metrics by class">
 </p>
 
 ### Deeper Look at the Hybrid Model
 
 <p align="center">
-  <img src="documents/images/fig05_normalized_confusion_matrix.png" width="48%" alt="Normalised confusion matrix">
-  <img src="documents/images/fig07_class_share_vs_recall.png" width="48%" alt="Class share vs recall">
+  <img src="images/fig05_normalized_confusion_matrix.png" width="48%" alt="Normalised confusion matrix">
+  <img src="images/fig07_class_share_vs_recall.png" width="48%" alt="Class share vs recall">
 </p>
 <p align="center">
-  <img src="documents/images/fig08_error_breakdown.png" width="60%" alt="Error breakdown">
+  <img src="images/fig08_error_breakdown.png" width="60%" alt="Error breakdown">
 </p>
 
 The normalised matrix shows what fraction of each real class the model gets right. Recall drops as classes get rarer, and most errors for Wheezes and Wheezes + Crackles are confusions with Normal and Crackles.
 
 ### Comparison with Previous Work (ICBHI 2017)
 
-![Comparison with prior work](documents/images/fig06_prior_work.png)
+![Comparison with prior work](images/fig06_prior_work.png)
 
 | Study | Method | Accuracy |
 |---|---|---:|
@@ -201,12 +201,9 @@ lung-sound-classification/
 │
 ├── lung_sounds.ipynb                    # full pipeline: preprocessing, features, models, evaluation
 │
-├── assets/
-│   └── workflow.png                     # pipeline diagram
-│
-└── documents/
-    ├── Research_Paper.pdf               # full research paper
-    └── images/                          # charts used in this README
+├── documents/
+    └── Research_Paper.pdf               # full research paper
+└──images/                          # charts used in this README
         ├── banner.png, kpi_cards.png
         └── fig01 ... fig08 (.png)
 ```
@@ -219,15 +216,7 @@ A simple MFCC-based pipeline, combined with SMOTE and a hybrid SVC + KNN model, 
 
 **Next steps:** patient-level cross-validation, richer features (mel-spectrograms, delta-MFCCs, wavelets), noise reduction, CNN or CNN-LSTM comparison, probability calibration, and testing on additional respiratory sound datasets.
 
-## Citation
 
-```bibtex
-@article{gupta2025hybridlung,
-  title  = {Designing a Hybrid Model for Chronic Respiratory Disease using Lung Sound Classification},
-  author = {Gupta, Khushi and Nasare, Medhavi and Tichkule, Shilpa and Morris, Nekita Chavhan and Agrawal, Rahul and Dhule, Chetan},
-  year   = {2025}
-}
-```
 
 ## Acknowledgements
 
