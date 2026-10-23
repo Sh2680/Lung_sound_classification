@@ -1,0 +1,75 @@
+# ============================================
+# Lung Sound Classification - .gitignore
+# ============================================
+
+# ---------- Dataset (large; download separately) ----------
+data/
+archive.zip
+*.zip
+respiratory_sound_database/
+Respiratory_Sound_Database/
+audio_and_txt_files/
+*.wav
+*.txt
+!requirements.txt
+
+# ---------- Trained models & large artifacts ----------
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+*.npy
+*.npz
+models/
+checkpoints/
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------- Jupyter / Colab ----------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.virtual_documents/
+
+# ---------- Logs & caches ----------
+*.log
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# ---------- Environment & secrets ----------
+.env
+.env.*
+*.key
+credentials.json
+
+# ---------- IDE / editor ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------- OS files ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Temporary / Office lock files ----------
+~$*
+*.tmp
+*.bak
